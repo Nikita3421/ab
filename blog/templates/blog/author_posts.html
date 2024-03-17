@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пост</title>
+</head>
+<body>
+    <h2>
+        <li>
+            {{ author.name }}
+        </li>
+    </h2>
+    <ul>
+        <li>
+            {{ author.bio }}
+        </li>
+        <h2>
+            {% for post in posts %}
+
+            <li>
+               {{ post.title }} - {{ post.published_date }}
+            </li>
+
+            {% endfor %}
+        </h2>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>пост</title>
+</head>
+<body>
+    <h2>
+        <li>
+            {{ post.title }}
+        </li>
+    </h2>
+    <ul>
+        <li>
+            {{ post.Auhor }} - {{ post.published_date }}
+        </li>
+        <h2>
+            <li>
+                {{ post.content }} - {{ post.published_recently}}
+            </li>
+            {%for comment in comments%}
+                <li>Author: {{comment.author_name}}
+                    {{comment.text}}
+                    <br>
+                    {{comment.created_time}}
+                </li>
+                <br>
+            {%endfor%}
+        </h2>
+    </ul>
+</body>
+</html>
